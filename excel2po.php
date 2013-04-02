@@ -37,7 +37,7 @@ ob_start(); ?>
         <?php if(!empty($duplicates)) { echo htmlList($duplicates, 'Duplicates (' . count($duplicates) . ')'); } ?>
         <?php if(!empty($missings)) { echo htmlList($missings, 'Missings (' . count($missings) . ')'); } ?>
         <h2>Result (<?php echo $engine->getTranslatedCount(); ?>)</h2>
-        <pre><?php echo nl2br($data); ?></pre>
+        <pre><?php echo htmlspecialchars($data); ?></pre>
     </body>
 </html>
 <?php
