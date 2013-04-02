@@ -58,14 +58,14 @@ exit;
 
 function htmlList($list = array(), $header = '') {
     ob_start(); ?>
-<h2><?php echo $header; ?></h2>
+<h2><?php echo htmlspecialchars($header); ?></h2>
 <ul>
 <?php foreach ($list as $key => $values) { ?>
     <li>
-        <?php echo $key; ?>
+        <?php echo htmlspecialchars($key); ?>
         <ul>
             <?php foreach ($values as $value) { ?>
-            <li><?php echo $value; ?></li>
+            <li><?php echo htmlspecialchars($value); ?></li>
             <?php } ?>
         </ul>
     </li>
